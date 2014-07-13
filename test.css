@@ -1,0 +1,145 @@
+.wrapper {
+	background: gray;
+	margin: auto;
+	width: 100%;
+	height: 100px;
+	position: relative;
+	text-align: center;
+}
+
+/*.animation {
+	margin: auto;
+	background: green;
+	/*width: 600px;*!/
+	width: auto;
+	height: auto;
+}
+
+.screen {
+	width: 195px;
+	/*width: auto;*!/
+	height: 419px;
+	/*height: auto;*!/
+}
+
+.one {
+	background: blue;
+	/*width: auto;*!/
+	height: auto;
+	float: left;
+	position: relative;
+	left: 80px;
+	-webkit-transition: .3s ease-in;
+}
+
+.two {
+	background: yellow;
+	/*width: auto;*!/
+	height: auto;
+	float: left;
+	position: relative;
+}
+
+.three {
+	background: red;
+	/*width: auto;*!/
+	height: auto;
+	float: left;
+	position: relative;
+	right: 80px;
+	-webkit-transition: .3s ease-in;
+}*/
+
+.animation {
+	background: orange;
+	width: auto;
+	height: auto;
+	position: relative;
+	margin: auto;
+	text-align: center;
+}
+
+.one {
+	background: yellow;
+	width: 33.3%;
+	min-width: 100px;
+	max-width: 240px;
+	height: auto;
+	position: relative;
+	/*right: -60px;*/
+	float: left;
+	text-align: left;	
+}
+
+.two {
+	background: green;
+	width: 33.3%;
+	min-width: 100px;
+	max-width: 240px;
+	height: auto;
+	position: relative;
+	float: left;
+	text-align: center;
+}
+
+.three {
+	background: red;
+	width: 33.3%;
+	min-width: 100px;
+	max-width: 240px;
+	height: auto;
+	position: relative;
+	/*left: -60px;*/
+	float: left;
+	text-align: right;
+}
+
+.screens {
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+.screen_one {
+	right: -60px;
+	-transition: .3s ease-in;
+	-webkit-transition: .3s ease-in;
+}
+
+
+.animation:hover .screen_one {
+	right: -50px;
+	-transition: .3s ease-out;
+	-webkit-transition: .3s ease-out;
+}
+
+.screen_three {
+	right: 60px;
+	-transition: .3s ease-in;
+	-webkit-transition: .3s ease-in;
+}
+
+.animation:hover .screen_three {
+	right: 50px;
+	-transition: .3s ease-out;
+	-webkit-transition: .3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

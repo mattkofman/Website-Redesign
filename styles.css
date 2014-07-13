@@ -50,9 +50,9 @@ p {
 .herobg {
 	width: 100%;
 	height: 88%;
-	max-height: 600px;
+	max-height: 700px;
 	top: 28px;
-	position: relative;
+	position: absolute;
 	text-align: center;
 	background-size: auto 100%;
 }
@@ -78,18 +78,18 @@ p {
 	padding-top: 30px;
 }
 
-/*.animation {
-	/*background: orange;*!/
-	/*width: 100%;*!/
-	/*height: 100px;*!/
-	/*height: 100px;*!/
-	/*position: relative;*!/
-	/*margin: auto;*!/
-	/*text-align: center;*!/
-	/*float: left;*!/
-	/*padding-top: 10px;*!/
-	/*margin-bottom: 30px;*!/
-}*/
+.animation {
+	/*background: orange;*/
+	/*width: 80%;*/
+	/*height: 100px;*/
+	/*height: 100px;*/
+	/*position: relative;*/
+	/*margin: auto;*/
+	/*text-align: center;*/
+	/*float: left;*/
+	/*padding-top: 10px;*/
+	/*margin-bottom: 30px;*/
+}
 
 .one {
 	/*background: yellow;*/
@@ -253,7 +253,8 @@ p {
 .iphoneframe {
 	background: url(images/iphone.png) center no-repeat;
 	width: 100%;
-	height: 90%;
+	height: 99%;
+	/*max-height: 92%;*/
 	margin-left: auto;
 	margin-right: auto;
 	z-index: 98;
@@ -287,8 +288,8 @@ p {
 	background-color: white;
 	width: 100%;
 	position: absolute;
-	top: 560px;
-	min-height: 12%;
+	top: 91%;
+	/*min-height: 12%;*/
 	height: auto;
 	z-index: 2;
 	border-top: 1px solid #f0f0f0;
@@ -352,8 +353,8 @@ video {
 }
 
 .process {
-	width: 70%;
-	max-width: 350px;
+	width: 100%;
+	max-width: 390px;
 	height: auto;
 }
 
