@@ -1,0 +1,311 @@
+<html>
+
+<head>
+
+	<title>
+		Website
+	</title>
+
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0-rc-1/pure-min.css">
+	<link rel="stylesheet" href="styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="imagelightbox.min.js"></script>
+	<script>
+	
+		$( function()
+		{
+			var activityIndicatorOn = function()
+				{
+					$( '<div id="imagelightbox-loading"><div></div></div>' ).appendTo( 'body' );
+				},
+				activityIndicatorOff = function()
+				{
+					$( '#imagelightbox-loading' ).remove();
+				},
+	
+				overlayOn = function()
+				{
+					$( '<div id="imagelightbox-overlay"></div>' ).appendTo( 'body' );
+				},
+				overlayOff = function()
+				{
+					$( '#imagelightbox-overlay' ).remove();
+				},
+	
+				closeButtonOn = function( instance )
+				{
+					$( '<a href="#" id="imagelightbox-close">Close</a>' ).appendTo( 'body' ).on( 'click touchend', function(){ $( this ).remove(); instance.quitImageLightbox(); return false; });
+				},
+				closeButtonOff = function()
+				{
+					$( '#imagelightbox-close' ).remove();
+				},
+	
+				captionOn = function()
+				{
+					var description = $( 'a[href="' + $( '#imagelightbox' ).attr( 'src' ) + '"] img' ).attr( 'alt' );
+					if( description.length > 0 )
+						$( '<div id="imagelightbox-caption">' + description + '</div>' ).appendTo( 'body' );
+				},
+				captionOff = function()
+				{
+					$( '#imagelightbox-caption' ).remove();
+				},
+	
+				navigationOn = function( instance, selector )
+				{
+					var images = $( selector );
+					if( images.length )
+					{
+						var nav = $( '<div id="imagelightbox-nav"></div>' );
+						for( var i = 0; i < images.length; i++ )
+							nav.append( '<a href="#"></a>' );
+	
+						nav.appendTo( 'body' );
+						nav.on( 'click touchend', function(){ return false; });
+	
+						var navItems = nav.find( 'a' );
+						navItems.on( 'click touchend', function()
+						{
+							var $this = $( this );
+							if( images.eq( $this.index() ).attr( 'href' ) != $( '#imagelightbox' ).attr( 'src' ) )
+								instance.switchImageLightbox( $this.index() );
+	
+							navItems.removeClass( 'active' );
+							navItems.eq( $this.index() ).addClass( 'active' );
+	
+							return false;
+						})
+						.on( 'touchend', function(){ return false; });
+					}
+				},
+				navigationUpdate = function( selector )
+				{
+					var items = $( '#imagelightbox-nav a' );
+					items.removeClass( 'active' );
+					items.eq( $( selector ).filter( '[href="' + $( '#imagelightbox' ).attr( 'src' ) + '"]' ).index( selector ) ).addClass( 'active' );
+				},
+				navigationOff = function()
+				{
+					$( '#imagelightbox-nav' ).remove();
+				};
+	
+			//	WITH OVERLAY & ACTIVITY INDICATION
+	
+			$( 'a[data-imagelightbox="a"]' ).imageLightbox(
+			{
+				onStart: 	 function() { overlayOn(); },
+				onEnd:	 	 function() { overlayOff(); activityIndicatorOff(); },
+				onLoadStart: function() { activityIndicatorOn(); },
+				onLoadEnd:	 function() { activityIndicatorOff(); }
+			});
+			
+			$( 'a[data-imagelightbox="b"]' ).imageLightbox(
+			{
+				onStart: 	 function() { overlayOn(); },
+				onEnd:	 	 function() { overlayOff(); activityIndicatorOff(); },
+				onLoadStart: function() { activityIndicatorOn(); },
+				onLoadEnd:	 function() { activityIndicatorOff(); }
+			});
+	
+		});
+	</script>
+	<script type="text/javascript">
+	       $(document).ready(function () {
+	           $("#sketches").click(function () {
+	               $('#processimg1').attr('src', 'images/bdwire1.png');
+	           });
+	           $("#wireframes").click(function () {
+	               $('#processimg1').attr('src', 'images/process/bdprocesswires1.png');
+	           });
+	           $("#mocks").click(function () {
+	               $('#processimg1').attr('src', 'images/process/bdprocessmock1.png');
+	           });
+	       });
+	       $(document).ready(function () {
+	           $("#sketches").click(function () {
+	               $('#processimg2').attr('src', 'images/bdwire1.png');
+	           });
+	           $("#wireframes").click(function () {
+	               $('#processimg2').attr('src', 'images/process/bdprocesswires2.png');
+	           });
+	           $("#mocks").click(function () {
+	               $('#processimg2').attr('src', 'images/process/bdprocessmock1.png');
+	           });
+	       });
+	       $(document).ready(function () {
+	           $("#sketches").click(function () {
+	               $('#processimg3').attr('src', 'images/bdwire1.png');
+	           });
+	           $("#wireframes").click(function () {
+	               $('#processimg3').attr('src', 'images/process/bdprocesswires3.png');
+	           });
+	           $("#mocks").click(function () {
+	               $('#processimg3').attr('src', 'images/process/bdprocessmock1.png');
+	           });
+	       });
+	   </script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<div class="navbar pure-g" align="center">
+		
+		<a class="pure-u-1" href="http://mattkofman.com">
+		<img class="logo" src="images/logo.png" alt="" /></a>
+		
+	</div>
+	
+	<div class="herobg dd">
+			
+			<div class="pure-g pagecontrols">
+			
+				<div class="pure-u-1-24 test">
+					<div class="button prevbtn"></div>
+				</div>
+				
+				<div class="pure-u-11-24 prev">
+					<div class="hide">Previous Project Title</div>
+				</div>
+				
+				<div class="pure-u-11-24 next">
+					<div class="hide">Next Project Title</div>
+				</div>
+				
+				<div class="pure-u-1-24 test">
+					<div class="button nextbtn"></div>
+				</div>
+			
+			</div>
+			
+			<!--<img align="center" class="mainimage" src="iphone.png" alt="">-->
+			
+			<div class="iphoneframe">
+			
+				<div class="iphonecontent bdgif">
+					<video src="videos/DD1.mp4" preload="true" autoplay="true" loop="true"></video>
+				</div>
+			
+			</div>
+	</div>
+	
+	<div class="contentwrapper pure-g">
+		
+		<div class="contenthead pure-u-1">
+			
+			<h1>BLOWDRY</h1>
+			<h3>PLATFORM APP STRATEGY</h3>
+			<p class="contenthead_description">The BlowDry app was a strategy engagement for a popular chain of blow dry bars located around New York City, with hopes of world-wide expansion. The idea behind this concept was to provided a multi-sided platform application for iOS devices. The two sides of this platform app were to be the consumer-facing side and the producer-facing side. This would, in theory, allow for both clientele and hair stylists to interact with one another, much like the popular app Uber operates.</p>
+			
+			<img class="icon" src="images/bdicon.png" alt="" />
+			
+		</div>
+			
+			<div class="pure-u-sm-1 pure-u-lg-1-2 pure-u-xl-1-2 center">
+			
+				<h4 class="bd_color">Consumer</h4>
+				
+				<!-- LIGHTBOX CONTENTS -->
+				<a href="images/full/bdcon7.jpg" data-imagelightbox="a" />
+				<a href="images/full/bdcon6.jpg" data-imagelightbox="a" />
+				<a href="images/full/bdcon5.jpg" data-imagelightbox="a" />
+				<a href="images/full/bdcon4.jpg" data-imagelightbox="a" />
+				<a href="images/full/bdcon3.jpg" data-imagelightbox="a" />
+				<a href="images/full/bdcon2.jpg" data-imagelightbox="a" />
+				<a href="images/full/bdcon1.jpg" data-imagelightbox="a"  >					
+					
+					<!-- ANIMATION -->
+					
+					<div class="animation">
+							
+							<div class="one"><img class="screens screen_one" src="images/bd1.png" alt="" /></div>
+							<div class="two"><img class="screens screen_two" src="images/bd2.png" alt="" /></div>
+							<div class="three"><img class="screens screen_three" src="images/bd3.png" alt="" /></div>
+							
+					</div>
+						
+					<!--<div class="animation">
+							
+							<div class="one"><img class="screen" src="images/bd1.png" alt="" /></div>
+							<div class="two"><img class="screen" src="images/bd2.png" alt="" /></div>
+							<div class="three"><img class="screen" src="images/bd3.png" alt="" /></div>
+							
+					</div>-->
+				
+				</a>	
+				
+				<p class="contenthead_subdescription">The consumer-facing side of BlowDry would allow users to view all available hairstyles, book and view upcoming appointments, collect rewards for referring friends, locate BlowDry salons, and shop for various BlowDry products. Upon an upcoming home appointment, the user would also be able to view how far away the stylist is from then in order to prepare for their visit.</p>
+				
+			</div>	
+			
+		<div class="pure-u-sm-1 pure-u-lg-1-2 pure-u-xl-1-2 center">
+			
+			<h4 class="bd_color">Producer</h4>
+			
+			<!-- LIGHTBOX CONTENTS -->
+			<a href="images/full/bdpro1.jpg" data-imagelightbox="b" />
+			<a href="images/full/bdpro2.jpg" data-imagelightbox="b" />
+			<a href="images/full/bdpro3.jpg" data-imagelightbox="b" />
+			<a href="images/full/bdpro4.jpg" data-imagelightbox="b"  >
+			
+				<!-- ANIMATION -->				
+					
+				<div class="animation">
+						
+						<div class="one"><img class="screens screen_one" src="images/bdpro1.png" alt="" /></div>
+						<div class="two"><img class="screens screen_two" src="images/bdpro2.png" alt="" /></div>
+						<div class="three"><img class="screens screen_three" src="images/bdpro3.png" alt="" /></div>
+						
+				</div>
+				
+				<!--<div class="animation">
+						<div class="one"><img class="screen" src="images/bdpro1.png" alt="" /></div>
+						<div class="two"><img class="screen" src="images/bdpro2.png" alt="" /></div>
+						<div class="three"><img class="screen" src="images/bdpro3.png" alt="" /></div>
+				</div>-->
+				
+			</a>
+			
+			<p class="contenthead_subdescription">The producer-facing side of BlowDry would allow stylists to see all booked appointments, provide the ability to mark themselves as on or off duty, get directions to their client's location for in-home appointments, view their current overall rating, and be able to show their clients all the available styles from which they can choose.</p>
+		</div>			
+		
+		<div class="contentbody">
+		
+			<div class="pure-u-1">
+				<h2>PROCESS</h2>
+				<button id="sketches" class="segcontrols left">SKETCHES</button>
+				<button id="wireframes" class="segcontrols center" onclick="changeImage(processimg1);">WIREFRAMES</button>
+				<button id="mocks" class="segcontrols right" onclick="changeImage();">MOCKUPS</button>
+			</div>
+			
+			<div class="pure-u-1-3 processimg">
+				<img id="processimg1" class="process" src="images/bdwire1.png" alt="" />
+			</div>
+			
+			<div class="pure-u-1-3 processimg">
+				<img id="processimg2" class="process" src="images/bdwire1.png" alt="" />
+			</div>
+			
+			<div class="pure-u-1-3 processimg">
+				<img id="processimg3" class="process" src="images/bdwire1.png" alt="" />
+			</div>
+			
+		</div>
+		
+		<div class="pure-u-1 returntotop">
+		
+			<button class="rtt_button"></button>
+		
+		</div>
+		
+	</div>
+
+</div>
+
+</body>
+
+</html>
