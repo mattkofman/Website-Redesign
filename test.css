@@ -1,56 +1,134 @@
-.wrapper {
-	background: gray;
+body {
+	background: yellow;
+}
+
+.navbar {
+	background: cyan;
+	padding: .4em;
+	width: auto;
+}
+
+.mk_logo {
 	margin: auto;
-	width: 100%;
-	height: 100px;
+	background: green;
+	width: 3.5em;
+	height: 1.3em;
+}
+
+.project_bg {
+	background: thistle;
+	height: 100%;
+	/*position: fixed;*/
+}
+
+.arrow_left {
+	background: springgreen;
+}
+
+.arrow_right {
+	background: chartreuse;
+}
+
+.content_wrapper {
+	background: paleturquoise;
 	position: relative;
+	margin-top: -5%;
+	z-index: 0;
+	padding-top: 60px;
+}
+
+.device_frame {
+	background: url(images/iphone.png) center no-repeat;
+	/*background-size: auto 100%;*/
+	width: auto;
+	height: 50px;
+	position: relative;
+	/*top: -60em;*/
+	/*margin-top: -95%;*/
+	z-index: 2;
+}
+
+h1 {
+	color: blueviolet;
+	text-align: center;
+	font-size: 4em;
+}
+
+h2 {
+	color: mediumpurple;
+	text-align: center;
+	font-size: 2.4em;
+}
+
+p {
+	width: 50%;
+	min-width: 320px;
+	max-width: 550px;
+	height: auto;
+	text-align: justify;
+	margin: auto;
+}
+
+.app_icon {
+	background: hotpink;
+	width: 120px;
+	height: 120px;
+	margin: 50 auto;
+}
+
+.screen_showcase1 {
+	background: coral;
+}
+
+.screen_showcase2 {
+	background: darkorange;
+}
+
+h3 {
+	color: indianred;
 	text-align: center;
 }
 
-/*.animation {
-	margin: auto;
-	background: green;
-	/*width: 600px;*!/
-	width: auto;
-	height: auto;
-}
-
-.screen {
-	width: 195px;
-	/*width: auto;*!/
-	height: 419px;
-	/*height: auto;*!/
-}
-
-.one {
-	background: blue;
-	/*width: auto;*!/
-	height: auto;
-	float: left;
-	position: relative;
-	left: 80px;
-	-webkit-transition: .3s ease-in;
-}
-
-.two {
+.screens {
+	text-align: center;
 	background: yellow;
-	/*width: auto;*!/
+}
+
+.screen1 {
+	background: lightslategray;
+	width: 30%;
 	height: auto;
-	float: left;
+	margin: auto;
+	position: relative;
+	left: 50px;
+}
+
+.screen2 {
+	background: blue;
+	width: 30%;
+	height: auto;
+	margin: auto;
 	position: relative;
 }
 
-.three {
-	background: red;
-	/*width: auto;*!/
+.screen3 {
+	background: green;
+	width: 30%;
 	height: auto;
-	float: left;
+	margin: auto;
 	position: relative;
-	right: 80px;
-	-webkit-transition: .3s ease-in;
-}*/
+	right: 50px;
+}
 
-.animation {
+.screens:hover .screen1 {
+	left: 38px;
+}
+
+.screens:hover .screen3 {
+	right: 38px;
+}
+
+/*.animation {
 	background: orange;
 	width: auto;
 	height: auto;
@@ -66,7 +144,7 @@
 	max-width: 240px;
 	height: auto;
 	position: relative;
-	/*right: -60px;*/
+	/*right: -60px;*!/
 	float: left;
 	text-align: left;	
 }
@@ -89,7 +167,7 @@
 	max-width: 240px;
 	height: auto;
 	position: relative;
-	/*left: -60px;*/
+	/*left: -60px;*!/
 	float: left;
 	text-align: right;
 }
@@ -123,7 +201,7 @@
 	right: 50px;
 	-transition: .3s ease-out;
 	-webkit-transition: .3s ease-out;
-}
+}*/
 
 
 
