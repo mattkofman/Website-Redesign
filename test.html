@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
 <link rel="stylesheet" href="test.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
@@ -16,58 +19,112 @@
 
 </div>
 
-<div class="project_bg pure-g">
+<div class="project_bg bdbg">
 
-	<div class="arrow_left pure-u-3-24 pure-u-md-1-24"><img style="height: 100px; width: 20px;" src="" alt="" /></div>
-	<div class="prev_project_title pure-u-9-24 pure-u-md-11-24"></div>
-	<div class="next_project_title pure-u-9-24 pure-u-md-11-24"></div>
-	<div class="arrow_right pure-u-3-24 pure-u-md-1-24"></div>
+	<!--<div class="pa pure-g">
+		<div class="arrow_left pure-u-3-24 pure-u-md-1-24"></div>
+		<div class="pure-u-9-24 pure-u-md-11-24"></div>
+		<div class="pure-u-9-24 pure-u-md-11-24"></div>
+		<div class="arrow_right pure-u-3-24 pure-u-md-1-24"></div>
+	</div>-->
+	
+	<div class="device_frame">
+		<div class="iphonecontent">
+			<video class="iphoneinside" src="videos/DD1.mp4" preload="true" autoplay="true" loop="true"></video>
+		</div>
+	</div>
 
 </div>
-
-<div class="device_frame"></div>
 
 <div class="content_wrapper pure-g">
 
-	<div class="pure-u-1">
+	<div class="content_header pure-u-1">
 		
-		<h1>Title</h1>
-		<h2>Subtitle</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. </p>
-		<div class="app_icon"></div>
+		<h1>Blowdry</h1>
 		
-	</div>
-	
-	<div class="screen_showcase1 pure-u-1 pure-u-sm-1 pure-u-md-1-2">
+		<h2>Platform App Strategy</h2>
 		
-		<h3>Screen Showcase Title</h3>
+		<p>The BlowDry app was a strategy engagement for a popular chain of blow dry bars located around New York City, with hopes of world-wide expansion. The idea behind this concept was to provided a multi-sided platform application for iOS devices. The two sides of this platform app were to be the consumer-facing side and the producer-facing side. This would, in theory, allow for both clientele and hair stylists to interact with one another, much like the popular app Uber operates.</p>
 		
-		<div class="screens">
-			<img class="screen1" src="images/bd3.png" alt="" />
-			<img class="screen2" src="images/bd3.png" alt="" />
-			<img class="screen3" src="images/bd3.png" alt="" />
-		</div>
-		<!--<div class="screen1 pure-u-1-3"></div>
-		<div class="screen2 pure-u-1-3"></div>
-		<div class="screen3 pure-u-1-3"></div>-->
+		<img class="app_icon" src="images/bdicon.png" alt="" />
 		
 	</div>
 	
-	<div class="screen_showcase2 pure-u-1 pure-u-sm-1 pure-u-md-1-2">
+	<div class="screen_showcase pure-u-1 pure-u-sm-1 pure-u-md-1-2">
 		
-		<h3>Screen Showcase Title</h3>
+		<h3>Consumer</h3>
 		
 		<div class="screens">
-			<img class="screen1" src="images/bd3.png" alt="" />
-			<img class="screen2" src="images/bd3.png" alt="" />
+			<img class="screen1" src="images/bd1.png" alt="" />
+			<img class="screen2" src="images/bd2.png" alt="" />
 			<img class="screen3" src="images/bd3.png" alt="" />
 		</div>
 		
+		<p class="screen_showcase_description">The consumer-facing side of BlowDry would allow users to view all available hairstyles, book and view upcoming appointments, collect rewards for referring friends, locate BlowDry salons, and shop for various BlowDry products. Upon an upcoming home appointment, the user would also be able to view how far away the stylist is from then in order to prepare for their visit.</p>
 		
 	</div>
-
+	
+	<div class="screen_showcase pure-u-1 pure-u-sm-1 pure-u-md-1-2">
+		
+		<h3>Producer</h3>
+		
+		<div class="screens">
+			<img class="screen1" src="images/bdpro1.png" alt="" />
+			<img class="screen2" src="images/bdpro2.png" alt="" />
+			<img class="screen3" src="images/bdpro3.png" alt="" />
+		</div>
+		
+		<p class="screen_showcase_description">The producer-facing side of BlowDry would allow stylists to see all booked appointments, provide the ability to mark themselves as on or off duty, get directions to their client's location for in-home appointments, view their current overall rating, and be able to show their clients all the available styles from which they can choose.</p>
+				
+	</div>
+	
+	<div class="processbg">
+	
+		<div class="process_showcase_title pure-u-1">
+			<h3>Process</h3>
+			<button id="sketches" class="segcontrols left">SKETCHES</button>
+			<button id="wireframes" class="segcontrols center" onclick="changeImage(processimg1);">WIREFRAMES</button>
+			<button id="mocks" class="segcontrols right" onclick="changeImage();">MOCKUPS</button>
+		</div>
+		
+		<div class="process_showcase pure-u-1 pure-u-md-1-3">
+			<img id="processimg1" class="process" src="images/process/bdprocesswires1.png" alt="" />
+		</div>
+		
+		<div class="process_showcase pure-u-1 pure-u-md-1-3">
+			<img id="processimg1" class="process" src="images/process/bdprocesswires1.png" alt="" />
+		</div>
+		
+		<div class="process_showcase pure-u-1 pure-u-md-1-3">
+			<img id="processimg1" class="process" src="images/process/bdprocesswires1.png" alt="" />
+		</div>
+		
+		<div class="process_showcase_title pure-u-1">
+			<p class="white screen_showcase_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+		</div>
+	
+	</div>
+	
 </div>
 
+<div class="footer pure-g">
+
+	<div class="pure-u-1">
+		<h2>By the way, you're looking beautiful today, <br />
+			I think we'd work great together.</h2>
+	</div>
+	
+	<object class="social twitter"></object>
+	
+	<object type="image/svg+xml" class="social twitter" data="images/twitter.svg"></object>
+	
+	<a class="social twitter pure-u-1-3" href="http://twitter.com"><!--<div class="social twitter pure-u-1-3"></div>--></a>
+	
+	<div class="footer_text pure-u-1">
+		&#9426; 2014 Matt Kofman
+	</div>
+	
+</div>
 
 
 
