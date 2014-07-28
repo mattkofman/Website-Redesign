@@ -15,6 +15,10 @@ body {
 	position: fixed;*/
 }
 
+.center {
+	margin: auto;
+}
+
 .mk_logo {
 	margin: auto;
 	background: url(images/mklogo.svg) center no-repeat;
@@ -33,6 +37,11 @@ body {
 
 .bdbg {
 	background: url(images/ddbg.jpg);
+	background-size: cover;
+}
+
+.flbg {
+	background: url(images/flbg.jpg);
 	background-size: cover;
 }
 
@@ -93,7 +102,6 @@ body {
 
 .iphonecontent {
 	text-align: center;
-	/*background: red;*/
 	width: 100%;
 	height: 71.1%;
 	margin-left: auto;
@@ -102,6 +110,16 @@ body {
 	position: relative;
 	top: 14.8%;
 	overflow: hidden;
+}
+
+.hero_bd {
+	background: url(images/full/bdcon1.jpg) center no-repeat;
+	background-size: auto 100%;
+}
+
+.hero_fl {
+	background: url(images/FL.png) center no-repeat;
+	background-size: auto 100%;
 }
 
 .iphoneinside {
@@ -129,10 +147,11 @@ h2 {
 }
 
 h3 {
-	font: 1.6em bebasNeue;
+	font: 2.6em bebasNeue;
 	text-align: center;
 	color: darkgray;
-	letter-spacing: .2em;
+	letter-spacing: .08em;
+	margin-bottom: 20px;
 }
 
 h4 {
@@ -140,9 +159,31 @@ h4 {
 	text-align: center;
 }
 
+h5 {
+	font: 1.5em bebasNeue;
+	text-align: center;
+	color: gray;
+	margin-top: 0.8em;
+	margin-bottom: 0px;
+}
+
+.bd_accent {
+	color: tan;
+}
+
+.fl_accent {
+	color: teal;
+}
+
+.signature {
+	margin-top: 62px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 p {
-	width: 50%;
-	min-width: 90%;
+	width: 80%;
+	/*min-width: 90%;*/
 	max-width: 550px;
 	height: auto;
 	text-align: justify;
@@ -151,8 +192,8 @@ p {
 	font-size: .95em;
 	/*letter-spacing: .1em;*/
 	line-height: 1.4em;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 2em;
+	padding-right: 2em;
 }
 
 .app_icon {
@@ -168,10 +209,10 @@ p {
 
 .screens {
 	text-align: center;
-	/*background: yellow;*/
 	margin-left: auto;
 	margin-right: auto;
-	width: 93%;
+	width: 100%;
+	max-width: 800px;
 }
 
 .screen1 {
@@ -217,12 +258,17 @@ p {
 }
 
 .screen_showcase_description {
-	margin-bottom: 40px;
+	margin-bottom: 80px;
 	margin-top: 40px;
+	width: 60%;
+	min-width: 300px;
+	max-width: ;
 }
 
 .processbg {
+	width: 100%;
 	background: #222222;
+	padding-bottom: 40px;
 }
 
 /*.process_showcase_title {
@@ -285,33 +331,65 @@ p {
 }
 
 .footer {
-	background: honeydew;
+	background: white;
 	text-align: center;
 	padding-bottom: 40px;
 }
 
-.social {
-	text-align: center;
-	width: 120px;
-	height: 120px;
+.connect {
 	margin: auto;
-	background: center;	
+	width: 30%;
+	min-width: 320px;
+}
+
+.social {
+	width: 6em;
+	height: 6em;
+	margin-top: 26px;
+}
+
+.s_r {
+	float: left;
+	clear: both;
+}
+
+.s_l {
+	float: right;
 }
 
 .twitter {
 	background: url(images/social/twitter.svg);
+	background-size: 100%;
 }
 
-.twitter:hover .twittersvg {
-	fill: #b42c2c;
-	/*background: url(images/social/twitter_p.svg);*/
+.twitter:hover {
+	background: url(images/social/twitter_p.svg);
+	background-size: 100%;
 }
 
+.email {
+	background: url(images/social/email.svg);
+	background-size: 100%;
+}
 
+.email:hover {
+	background: url(images/social/email_p.svg);
+	background-size: 100%;
+}
+
+.linkedin {
+	background: url(images/social/linkedin.svg);
+	background-size: 100%;
+}
+
+.linkedin:hover {
+	background: url(images/social/linkedin_p.svg);
+	background-size: 100%;
+}
 
 .footer_text {
 	font-size: 11px;
-	margin-top: 40px;
+	margin-top: 30px;
 	color: #a8a8a8;
 }
 
