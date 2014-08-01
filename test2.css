@@ -1,0 +1,356 @@
+@font-face {
+	font-family: bebasNeue;
+	src: url(fonts/BebasNeueBook.otf);
+	format: (opentype);
+}
+
+.navigationbar {
+	/*background: yellow;*/
+	position: relative;
+	padding: .4em;
+}
+
+.mk_logo {
+	margin: auto;
+	background: url(images/mklogo.svg) center no-repeat;
+	width: 3.5em;
+	height: 1em;
+}
+
+.background {
+	/*background: pink;*/
+	/*background-size: auto 100%;*/
+	width: 100%;
+	height: 88%;
+	max-height: 720px;
+	position: absolute;
+}
+
+.flbg {
+	background: url(images/flbg.jpg);
+	background-size: cover;
+}
+
+.device {
+	background: url(images/iphoneframe.svg) center / auto 100% no-repeat /*rgba(128, 0, 127, 0.5)*/;
+	width: auto;
+	height: 97.2%;
+	max-height: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 0px;
+	-webkit-filter: drop-shadow(0px 0px 16px rgba(0,0,0,0.2));
+	filter: url(shadow.svg#drop-shadow);
+}
+
+.devicecontent {
+	background: url(images/FL.png) center no-repeat /*green*/;
+	background-size: auto 100%;
+	width: auto;
+	height: 66.72%;
+	position: relative;
+	top: 17%;
+}
+
+h1 {
+	font: 4em bebasNeue;
+	/*background: blue;*/
+	margin-top: 10px;
+	padding: 0px;
+	color: black;
+	text-align: center;
+	letter-spacing: .1em;
+}
+
+h2 {
+	/*background: cyan;*/
+	text-align: center;
+	font: 3.3em bebasNeue;
+	color: darkgray;
+	letter-spacing: .05em;	
+	margin-bottom: 10px;
+}
+
+h3 {
+	/*background: orange;*/
+	font: 2em bebasNeue;
+	color: silver;
+	text-align: center;
+	margin-top: -44px;
+	letter-spacing: .1em;
+}
+
+h4 {
+	font: 2em bebasNeue;
+	color: silver;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	letter-spacing: .1em;
+}
+
+h5 {
+	/*background: orange;*/
+	font: 2em bebasNeue;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	letter-spacing: .1em;
+}
+
+h6 {
+	font: 1.5em bebasNeue;
+	text-align: center;
+	color: gray;
+	margin-top: 0.8em;
+	margin-bottom: 0px;
+}
+
+p {
+	/*background: red;*/
+	font-family: 'Lato', sans-serif;
+	font-size: .95em;
+	width: 60%;
+	min-width: 280px;
+	max-width: 600px;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: justify;
+}
+
+.appicon {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	background: url(images/flicon.png) /*hotpink*/ center no-repeat;
+	background-size: 100%;
+	width: 120px;
+	height: 120px;
+}
+
+.screens {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	width: 100%;
+	max-width: 800px;
+	/*background: silver;*/
+}
+
+/*.screenoverlay {
+	background-color: rgba(244, 134, 245, 0.57);
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 21%;
+	z-index: 1000000;
+}*/
+
+.screen1 {
+	/*background: lightslategray;*/
+	width: 30%;
+	height: auto;
+	margin: auto;
+	position: relative;
+	left: 50px;
+	-transition: .3s ease-in;
+	-webkit-transition: .3s ease-in;
+}
+
+.screen2 {
+	/*background: blue;*/
+	width: 30%;
+	height: auto;
+	margin: auto;
+	position: relative;
+}
+
+.screen3 {
+	/*background: green;*/
+	width: 30%;
+	height: auto;
+	margin: auto;
+	position: relative;
+	right: 50px;
+	-transition: .3s ease-in;
+	-webkit-transition: .3s ease-in;
+}
+
+.screens:hover .screen1 {
+	left: 38px;
+	-transition: .3s ease-out;
+	-webkit-transition: .3s ease-out;
+}
+
+.screens:hover .screen3 {
+	right: 38px;
+	-transition: .3s ease-out;
+	-webkit-transition: .3s ease-out;
+}
+
+.processsection {
+	background: url(images/b2.png), url(images/process.jpg) fixed #222222;
+	background-size: cover;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	margin-top: 80px;
+	text-align: center;
+	opacity: 1;
+}
+
+.segcontrols {
+	background-color: rgba(34, 34, 34, 0.9);
+	color: darkgray;
+	border: 1px solid darkgray;
+	padding: 14px 3%;
+	margin-bottom: 17px;
+	position: relative;
+	/*top: 10%;*/
+	font-size: 11px;
+	letter-spacing: .2em;
+		-webkit-transition: .08s ease-in-out;
+		-moz-transition: .08s ease-in-out;
+		-o-transition: .08s ease-in-out;
+		transition: .08s ease-in-out;
+}
+
+.segcontrols:hover {
+	background-color: darkgray;
+	border-color: darkgray;
+	color: #222222;
+		-webkit-transition: .08s ease-in-out;
+		-moz-transition: .08s ease-in-out;
+		-o-transition: .08s ease-in-out;
+		transition: .08s ease-in-out;
+		
+}
+
+.left {
+	border-top-left-radius:.5em;
+	border-bottom-left-radius: .5em;
+	margin-right: -6px;
+}
+
+.right {
+	border-top-right-radius:.5em;
+	border-bottom-right-radius: .5em;
+	margin-left: -5px;
+}
+
+.process {
+	width: 70%;
+	max-width: 400px;
+}
+
+.conclusion {
+	background: #e8e8e8;
+	padding-bottom: 50px;
+	padding-top: 1px;
+}
+
+.footer {
+	background: white;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.connect {
+	margin: auto;
+	width: 40%;
+	min-width: 320px;
+}
+
+.social {
+	width: 6em;
+	height: 6em;
+	margin-top: px;
+}
+
+.s_r {
+	float: left;
+	clear: both;
+}
+
+.s_l {
+	float: right;
+}
+
+.twitter {
+	background: url(images/social/twitter.svg);
+	background-size: 100%;
+	margin: auto;
+}
+
+.twitter:hover {
+	background: url(images/social/twitter_p.svg);
+	background-size: 100%;
+}
+
+.email {
+	background: url(images/social/email.svg);
+	background-size: 100%;
+	margin: auto;
+}
+
+.email:hover {
+	background: url(images/social/email_p.svg);
+	background-size: 100%;
+}
+
+.linkedin {
+	background: url(images/social/linkedin.svg);
+	background-size: 100%;
+	margin: auto;
+}
+
+.linkedin:hover {
+	background: url(images/social/linkedin_p.svg);
+	background-size: 100%;
+}
+
+.resume {
+	/*background-color: rgba(34, 34, 34, 0.9);*/
+	margin: auto;
+	color: #696969;
+	border: 1px solid #808080;
+	padding: 14px 13%;
+	margin-top: 20px;
+	margin-bottom: 17px;
+	position: relative;
+	/*top: 10%;*/
+	font-size: 11px;
+	letter-spacing: .2em;
+		/*-webkit-transition: .08s ease-in-out;
+		-moz-transition: .08s ease-in-out;
+		-o-transition: .08s ease-in-out;
+		transition: .08s ease-in-out;*/
+}
+
+.resume:hover {
+	border-color: #4bb8ff;
+	color: #4bb8ff;
+		/*-webkit-transition: .08s ease-in-out;
+		-moz-transition: .08s ease-in-out;
+		-o-transition: .08s ease-in-out;
+		transition: .08s ease-in-out;*/
+		
+}
+
+
+.footer_text {
+	font-size: 11px;
+	margin-top: 5px;
+	color: #a8a8a8;
+}
+
+
+@media (max-width: 35.5em) {
+	.hide {
+		display: none;
+	}
+}
