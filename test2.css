@@ -120,6 +120,10 @@ p {
 	text-align: justify;
 }
 
+.bd_accent {
+	color: teal;
+}
+
 .appicon {
 	margin-left: auto;
 	margin-right: auto;
@@ -311,6 +315,10 @@ p {
 .linkedin:hover {
 	background: url(images/social/linkedin_p.svg);
 	background-size: 100%;
+}
+
+.soc3:hover {
+	color: red;
 }
 
 .resume {
