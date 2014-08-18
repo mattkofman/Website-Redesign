@@ -1,150 +1,60 @@
 <html>
 
 <head>
-<title>Test 2</title>
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
-<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="test2.css" type="" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="imagelightbox.min.js"></script>
-<script>
+	<title>Test 2</title>
+	
+	<link rel="stylesheet" href="box.css" type="text/css" />
+	
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="test2.css" type="text/css" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<script src="imagelightbox.js"></script>
+	
+	<script src="box.js"></script>
+	
+	<script type="text/javascript">
+	       $(document).ready(function () {
+	           $("#sketches").click(function () {
+	               $('#processimg1').attr('src', 'images/process/bdprocesssketch1.png');
+	           });
+	           $("#wireframes").click(function () {
+	               $('#processimg1').attr('src', 'images/process/bdprocesswires1.png');
+	           });
+	           $("#mocks").click(function () {
+	               $('#processimg1').attr('src', 'images/process/bdprocessmock1.png');
+	           });
+	       });
+	       $(document).ready(function () {
+	           $("#sketches").click(function () {
+	               $('#processimg2').attr('src', 'images/process/bdprocesssketch2.png');
+	           });
+	           $("#wireframes").click(function () {
+	               $('#processimg2').attr('src', 'images/process/bdprocesswires2.png');
+	           });
+	           $("#mocks").click(function () {
+	               $('#processimg2').attr('src', 'images/process/bdprocessmock2.png');
+	           });
+	       });
+	       $(document).ready(function () {
+	           $("#sketches").click(function () {
+	               $('#processimg3').attr('src', 'images/process/bdprocesssketch3.png');
+	           });
+	           $("#wireframes").click(function () {
+	               $('#processimg3').attr('src', 'images/process/bdprocesswires3.png');
+	           });
+	           $("#mocks").click(function () {
+	               $('#processimg3').attr('src', 'images/process/bdprocessmock3.png');
+	           });
+	       });
+	 </script>
 
-	$( function()
-	{
-		var activityIndicatorOn = function()
-			{
-				$( '<div id="imagelightbox-loading"><div></div></div>' ).appendTo( 'body' );
-			},
-			activityIndicatorOff = function()
-			{
-				$( '#imagelightbox-loading' ).remove();
-			},
-
-			overlayOn = function()
-			{
-				$( '<div id="imagelightbox-overlay"></div>' ).appendTo( 'body' );
-			},
-			overlayOff = function()
-			{
-				$( '#imagelightbox-overlay' ).remove();
-			},
-
-			closeButtonOn = function( instance )
-			{
-				$( '<a href="#" id="imagelightbox-close">Close</a>' ).appendTo( 'body' ).on( 'click touchend', function(){ $( this ).remove(); instance.quitImageLightbox(); return false; });
-			},
-			closeButtonOff = function()
-			{
-				$( '#imagelightbox-close' ).remove();
-			},
-
-			captionOn = function()
-			{
-				var description = $( 'a[href="' + $( '#imagelightbox' ).attr( 'src' ) + '"] img' ).attr( 'alt' );
-				if( description.length > 0 )
-					$( '<div id="imagelightbox-caption">' + description + '</div>' ).appendTo( 'body' );
-			},
-			captionOff = function()
-			{
-				$( '#imagelightbox-caption' ).remove();
-			},
-
-			navigationOn = function( instance, selector )
-			{
-				var images = $( selector );
-				if( images.length )
-				{
-					var nav = $( '<div id="imagelightbox-nav"></div>' );
-					for( var i = 0; i < images.length; i++ )
-						nav.append( '<a href="#"></a>' );
-
-					nav.appendTo( 'body' );
-					nav.on( 'click touchend', function(){ return false; });
-
-					var navItems = nav.find( 'a' );
-					navItems.on( 'click touchend', function()
-					{
-						var $this = $( this );
-						if( images.eq( $this.index() ).attr( 'href' ) != $( '#imagelightbox' ).attr( 'src' ) )
-							instance.switchImageLightbox( $this.index() );
-
-						navItems.removeClass( 'active' );
-						navItems.eq( $this.index() ).addClass( 'active' );
-
-						return false;
-					})
-					.on( 'touchend', function(){ return false; });
-				}
-			},
-			navigationUpdate = function( selector )
-			{
-				var items = $( '#imagelightbox-nav a' );
-				items.removeClass( 'active' );
-				items.eq( $( selector ).filter( '[href="' + $( '#imagelightbox' ).attr( 'src' ) + '"]' ).index( selector ) ).addClass( 'active' );
-			},
-			navigationOff = function()
-			{
-				$( '#imagelightbox-nav' ).remove();
-			};
-
-		//	WITH OVERLAY & ACTIVITY INDICATION
-
-		$( 'a[data-imagelightbox="a"]' ).imageLightbox(
-		{
-			onStart: 	 function() { overlayOn(); },
-			onEnd:	 	 function() { overlayOff(); activityIndicatorOff(); },
-			onLoadStart: function() { activityIndicatorOn(); },
-			onLoadEnd:	 function() { activityIndicatorOff(); }
-		});
-		
-		$( 'a[data-imagelightbox="b"]' ).imageLightbox(
-		{
-			onStart: 	 function() { overlayOn(); },
-			onEnd:	 	 function() { overlayOff(); activityIndicatorOff(); },
-			onLoadStart: function() { activityIndicatorOn(); },
-			onLoadEnd:	 function() { activityIndicatorOff(); }
-		});
-
-	});
-</script>
-
-<script type="text/javascript">
-       $(document).ready(function () {
-           $("#sketches").click(function () {
-               $('#processimg1').attr('src', 'images/bdwire1.png');
-           });
-           $("#wireframes").click(function () {
-               $('#processimg1').attr('src', 'images/process/bdprocesswires1.png');
-           });
-           $("#mocks").click(function () {
-               $('#processimg1').attr('src', 'images/process/bdprocessmock1.png');
-           });
-       });
-       $(document).ready(function () {
-           $("#sketches").click(function () {
-               $('#processimg2').attr('src', 'images/bdwire1.png');
-           });
-           $("#wireframes").click(function () {
-               $('#processimg2').attr('src', 'images/process/bdprocesswires2.png');
-           });
-           $("#mocks").click(function () {
-               $('#processimg2').attr('src', 'images/process/bdprocessmock1.png');
-           });
-       });
-       $(document).ready(function () {
-           $("#sketches").click(function () {
-               $('#processimg3').attr('src', 'images/bdwire1.png');
-           });
-           $("#wireframes").click(function () {
-               $('#processimg3').attr('src', 'images/process/bdprocesswires3.png');
-           });
-           $("#mocks").click(function () {
-               $('#processimg3').attr('src', 'images/process/bdprocessmock1.png');
-           });
-       });
-   </script>
 
 
 </head>
@@ -155,40 +65,34 @@
 	<div class="mk_logo" src="" alt="" /></div>
 </div>
 
-<div class="background flbg"></div>
+<div class="background bdbg"></div>
 
 <div class="device">
-	<div class="devicecontent"></div>
+	<div class="devicecontent bdcontent"></div>
 </div>
 
 <div class="wrapper">
-	<h1>Freshlist</h1>
-	<h3>Keep your groceries fresh, dawg</h3>
-	<p>Fortunately I've been adhering to a pretty strict drug regimen to keep my mind, you know, limber. Shit, I know that guy. He's a nihilist. Sure. That and a pair of testicles. What the fuck does Vietnam have to do with anything! What the fuck were you talking about?! They're nihilists. Yeah, well, right man, there are many facets to this, uh, you know, many interested parties. If I can find your money, man— what's in it for the Dude?</p>
-	<div class="appicon"></div>
+	<h1>BlowDry</h1>
+	<h3>Platform App Strategy</h3>
+	<p>The BlowDry app was a strategy engagement for a popular chain of blow dry bars located around New York City, with hopes of world-wide expansion. The idea behind this concept was to provided a multi-sided platform application for iOS devices. The two sides of this platform app were to be the consumer-facing side and the producer-facing side. This would, in theory, allow for both clientele and hair stylists to interact with one another, much like the popular app Uber operates.<!--Fucking fascist! Yeah well, that's just, ya know, like, your opinion, man. Sure. That and a pair of testicles. Fortunately I've been adhering to a pretty strict drug regimen to keep my mind, you know, limber. Well, you know, the Dude abides. You got the wrong guy. I'm the Dude, man. Well sir, it's this rug I have, really tied the room together.--></p>
+	<div class="appicon bdicon"></div>
 	
 	<div class="pure-g">
 		<div class="screen_showcase pure-u-1 pure-u-md-1-2">
 			
 			<h5 class="bd_accent">Consumer</h5>
 			
-			<a href="images/full/bdcon7.jpg" data-imagelightbox="a" />
-			<a href="images/full/bdcon6.jpg" data-imagelightbox="a" />
-			<a href="images/full/bdcon5.jpg" data-imagelightbox="a" />
-			<a href="images/full/bdcon4.jpg" data-imagelightbox="a" />
-			<a href="images/full/bdcon3.jpg" data-imagelightbox="a" />
-			<a href="images/full/bdcon2.jpg" data-imagelightbox="a" />
-			<a href="images/full/bdcon1.jpg" data-imagelightbox="a"  >
-			
 				<div class="screens">
-					<img class="screen1" src="images/showcase/fl_ios_ani_1.png" alt="" />
-					<img class="screen2" src="images/showcase/fl_ios_ani_2.png" alt="" />
-					<img class="screen3" src="images/showcase/fl_ios_ani_3.png" alt="" />
+				<a href="images/full/bdcon1.png" data-imagelightbox="b">
+					<img class="screen1" src="images/showcase/bd_con_ani_1.png" alt="" />
+					<img class="screen2" src="images/showcase/bd_con_ani_2.png" alt="" />
+					<img class="screen3" src="images/showcase/bd_con_ani_3.png" alt="" />
+				</a>
 				</div>
+			<a href="images/process.jpg" data-imagelightbox="b"></a>
 			
-			</a>
 			
-			<p class="screen_showcase_description">The consumer-facing side of BlowDry would allow users to view all available hairstyles, book and view upcoming appointments, collect rewards for referring friends.</p>
+			<p class="screen_showcase_description">The consumer-facing side of BlowDry would allow users to view all available hairstyles, book and view upcoming appointments, collect rewards for referring friends, locate BlowDry salons, and shop for various products.<!--It's a fucking show dog with fucking papers. You can't board it. It gets upset, its hair falls out. Come on, Donny, they were threatening castration! And Hill 364. These young men gave their lives. And Donny too. Donny who... who loved bowling.--></p>
 			
 		</div>
 		
@@ -202,9 +106,11 @@
 				<img class="screen3" src="images/showcase/bd_pro_ani_3.png" alt="" />
 			</div>
 			
-			<p class="screen_showcase_description">The producer-facing side of BlowDry would allow stylists to see all booked appointments, provide the ability to mark themselves as on or off duty.</p>
+			<p class="screen_showcase_description">The producer-facing side of BlowDry would allow stylists to see all booked appointments, provide the ability to mark themselves as on or off duty, get directions to their client's location for in-home appointments, and view their current overall rating.<!--I am the Walrus. Are they gonna hurt us, Walter? What's a pederast, Walter? How come you don't roll on Saturday, Walter? They were Nazis, Dude? Who's in pyjamas, Walter? Those are good burgers, Walter. They were Nazis, Dude?--></p>
 					
 		</div>
+		
+		
 		
 	</div>
 	
@@ -217,15 +123,15 @@
 		
 		<div class="pure-g">
 			<div class="pure-u-1 pure-u-md-1-3">
-				<img id="processimg1" class="process" src="images/process/bdprocesswires1.png" alt="" />
+				<img id="processimg1" class="process" src="images/process/bdprocesssketch1.png" alt="" />
 			</div>
 			
 			<div class="pure-u-1 pure-u-md-1-3 hide">
-				<img id="processimg2" class="process" src="images/process/bdprocesswires1.png" alt="" />
+				<img id="processimg2" class="process" src="images/process/bdprocesssketch2.png" alt="" />
 			</div>
 			
 			<div class="pure-u-1 pure-u-md-1-3 hide">
-				<img id="processimg3" class="process" src="images/process/bdprocesswires1.png" alt="" />
+				<img id="processimg3" class="process" src="images/process/bdprocesssketch3.png" alt="" />
 			</div>
 		</div>
 	
@@ -235,7 +141,7 @@
 	
 		<h2>In Conclusion</h2>
 		
-		<p>Well sure, look at it! Young trophy wife, I mean, in the parlance of our times, owes money all over town, including to known pornographers— and that's cool, that's cool. Listen, Maude, I'm sorry if your stepmother is a nympho. Hey, man, if my fucking ex-wife asked me to take care of her fucking dog while she and her boyfriend went to Honolulu, I'd tell her to go fuck herself.</p>
+		<p>I don't know about you, but I take comfort in that. It's good knowin' he's out there, the Dude, takin' her easy for all us sinners. Shit. I sure hope he makes The finals. Welp, that about does her, wraps her all up. Things seem to've worked out pretty good for the Dude'n Walter, and it was a purt good story, dontcha think? Made me laugh to beat the band. Parts, anyway. Course—I didn't like seein' Donny go. But then, happen to know that there's a little Lebowski on the way. I guess that's the way the whole durned human comedy keeps perpetuatin' itself, down through the generations, westward the wagons, across the sands a time until— aw, look at me, I'm ramblin' again. Wal, uh hope you folks enjoyed yourselves.</p>
 	
 	</div>
 	
@@ -275,9 +181,6 @@
 		
 </div>
 
-
-
 </body>
-
 
 </html>

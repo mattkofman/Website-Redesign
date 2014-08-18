@@ -31,6 +31,11 @@
 	background-size: cover;
 }
 
+.bdbg {
+	background: url(images/ddbg.jpg);
+	background-size: cover;
+}
+
 .device {
 	background: url(images/iphoneframe.svg) center / auto 100% no-repeat /*rgba(128, 0, 127, 0.5)*/;
 	width: auto;
@@ -45,12 +50,15 @@
 }
 
 .devicecontent {
-	background: url(images/FL.png) center no-repeat /*green*/;
-	background-size: auto 100%;
 	width: auto;
 	height: 66.72%;
 	position: relative;
 	top: 17%;
+}
+
+.bdcontent {
+	background: url(videos/gif.gif) center no-repeat /*green*/;
+	background-size: auto 100%;
 }
 
 h1 {
@@ -120,8 +128,12 @@ p {
 	text-align: justify;
 }
 
-.bd_accent {
+.fl_accent {
 	color: teal;
+}
+
+.bd_accent {
+	color: darkgoldenrod;
 }
 
 .appicon {
@@ -129,10 +141,18 @@ p {
 	margin-right: auto;
 	margin-top: 40px;
 	margin-bottom: 20px;
-	background: url(images/flicon.png) /*hotpink*/ center no-repeat;
-	background-size: 100%;
 	width: 120px;
 	height: 120px;
+}
+
+.flicon {
+	background: url(images/flicon.png) /*hotpink*/ center no-repeat;
+	background-size: 100%;
+}
+
+.bdicon {
+	background: url(images/bdicon.png) center no-repeat;
+	background-size: 100%;
 }
 
 .screens {
@@ -208,7 +228,7 @@ p {
 }
 
 .segcontrols {
-	background-color: rgba(34, 34, 34, 0.9);
+	background-color: rgba(0, 0, 0, 0);
 	color: darkgray;
 	border: 1px solid darkgray;
 	padding: 14px 3%;
@@ -362,3 +382,4 @@ p {
 		display: none;
 	}
 }
+
