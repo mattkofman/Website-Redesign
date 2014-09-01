@@ -54,6 +54,11 @@
 	height: 66.72%;
 	position: relative;
 	top: 17%;
+	text-align: center;
+}
+
+.video {
+	height: 100%;
 }
 
 .bdcontent {
